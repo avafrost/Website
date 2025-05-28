@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ava's Multiverse</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background-color: #f1c40f;
+      color: #222;
+      padding: 30px;
+      text-align: center;
+      font-size: 2em;
+    }
+
+    nav {
+      background-color: #333;
+      overflow: hidden;
+    }
+
+    nav a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #575757;
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    .tab {
+      display: none;
+    }
+
+    .tab.active {
+      display: block;
+    }
+
+    h2 {
+      color: #333;
+    }
+  </style>
+  <script>
+    function showTab(tabId) {
+      const tabs = document.querySelectorAll('.tab');
+      tabs.forEach(tab => tab.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+    }
+
+    window.onload = function () {
+      showTab('books');
+    };
+  </script>
+</head>
+<body>
+
+<header>
+  Ava's Multiverse
+</header>
+
+<nav>
+  <a href="#" onclick="showTab('books')">Books to Love</a>
+  <a href="#" onclick="showTab('cathedrals')">Cathedrals</a>
+  <a href="#" onclick="showTab('closet')">Ava's Traveling Closet</a>
+  <a href="#" onclick="showTab('venus')">Venus</a>
+  <a href="#" onclick="showTab('europa')">Europa</a>
+  <a href="#" onclick="showTab('solar')">Solar</a>
+</nav>
+
+<div class="content">
+  <div id="books" class="tab">
+    <h2>Books to Love</h2>
+    <ul>
+      <li><strong>The Book Thief</strong> by Markus Zusak</li>
+      <li><strong>Circe</strong> by Madeline Miller</li>
+      <li><strong>Dune</strong> by Frank Herbert</li>
+      <li><strong>Pride and Prejudice</strong> by Jane Austen</li>
+    </ul>
+  </div>
+
+  <div id="cathedrals" class="tab">
+    <h2>Cathedrals</h2>
+    <p>Exploring majestic cathedrals around the world: Notre-Dame, St. Peter's Basilica, and more.</p>
+  </div>
+
+  <div id="closet" class="tab">
+    <h2>Ava's Traveling Closet</h2>
+    <p>From Parisian scarves to Tokyo streetwear — documenting styles from every stop.</p>
+  </div>
+
+  <div id="venus" class="tab">
+    <h2>Venus</h2>
+    <p>Venus, shrouded in thick clouds, is a planet of mystery and extremes. Learn about its volcanic terrain and runaway greenhouse effect.</p>
+  </div>
+
+  <div id="europa" class="tab">
+    <h2>Europa</h2>
+    <p>One of Jupiter's moons, Europa has an icy surface that might hide an ocean beneath — a potential home for life?</p>
+  </div>
+
+  <div id="solar" class="tab">
+    <h2>Solar</h2>
+    <p>The sun, our life-giving star. Dive into solar flares, sunspots, and the science of heliophysics.</p>
+  </div>
+</div>
+
+</body>
+</html>
